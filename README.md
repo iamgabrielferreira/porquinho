@@ -82,6 +82,7 @@ Feedbacks e sugestões são sempre bem-vindos! 🐷
 ## ⚙️ Ferramentas
 
 ![Java](https://img.shields.io/badge/-Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
 
 ## 📬 Contato
 
