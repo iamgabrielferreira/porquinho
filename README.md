@@ -79,6 +79,10 @@ Feedbacks e sugestões são sempre bem-vindos! 🐷
 
 ---
 
+## ⚙️ Ferramentas
+
+![Java](https://img.shields.io/badge/-Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+
 ## 📬 Contato
 
 Acompanhe a evolução também no [LinkedIn](https://www.linkedin.com/in/gabrielferreiradias-ti/) — vou postar as atualizações conforme o projeto avança.
