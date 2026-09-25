@@ -9,6 +9,7 @@ Por aqui você vai encontrar:
 ```
 📄 Menu.java           → o cérebro do sistema (menu principal)
 📄 CadastroGastos.java → onde os gastos são cadastrados
+📄 ListarGastos.java -> onde todos os gastos são listados
 ```
 
 Sinta-se em casa, mas cuidado pra não deixar o porquinho no vermelho. 🐽
