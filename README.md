@@ -14,8 +14,8 @@ A ideia é simples: um sistema de controle financeiro via terminal que **cresce 
 |---|---|
 | Menu principal | ✅ |
 | Cadastrar gasto | ✅ |
-| Listar gastos | 🔧 em desenvolvimento |
-| Calcular total de gastos | ⏳ |
+| Listar gastos | ✅ |
+| Calcular total de gastos | 🔧 em desenvolvimento |
 | Excluir gasto | ⏳ |
 | Cadastrar receita | ⏳ |
 | Calcular saldo | ⏳ |
@@ -40,14 +40,14 @@ v1.0  Spring Boot + API REST      → projeto vira um backend completo
 
 ## 🧠 Conceitos já aplicados
 
-- `Scanner` (instância única compartilhada entre métodos)
-- Estruturas de repetição (`while`, `do-while`)
-- `switch` para controle de menu
-- Tratamento de exceções (`try/catch`, `InputMismatchException`)
-- `ArrayList` e generics (`ArrayList<String>`, `ArrayList<Double>`)
-- Passagem de parâmetros e coleções por referência entre métodos
-- Validação de entrada do usuário
-
+* `Scanner` (instância única compartilhada entre métodos)
+* Estruturas de repetição (`while`, `do-while`, `for`)
+* `switch` para controle de menu
+* Tratamento de exceções (`try/catch`, `InputMismatchException`)
+* `ArrayList` e generics (`ArrayList<String>`, `ArrayList<Double>`)
+* Percorrer `ArrayList` por índice usando `.size()` e `.get()`
+* Passagem de parâmetros e coleções por referência entre métodos
+* Validação de entrada do usuário
 ---
 
 ## 🛠️ Como rodar
@@ -67,6 +67,7 @@ PorquinhoFinanceiro/
 └── ProjetoPorquinho/
     ├── Menu.java
     └── CadastroGastos.java
+    └── ListarGastos.java
 ```
 
 ---
