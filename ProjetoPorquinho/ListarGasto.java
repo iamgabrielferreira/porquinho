@@ -8,6 +8,7 @@ public class ListarGasto {
 
         if (descricoes.isEmpty()) {
             System.out.println("Não há gastos cadastrados. \nParabéns!");
+            System.out.println();
         }
 
         for (int l = 0; l <  descricoes.size(); l++) {
