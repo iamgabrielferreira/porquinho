@@ -7,13 +7,14 @@ public class ListarGasto {
         System.out.println();
 
         if (descricoes.isEmpty()) {
-            System.out.println("Não há gastos cadastrados. \nParabéns!");
+            System.out.println("Seu Porquinho não encontrou nenhum gasto cadastrado. \nParabéns! Seu dinheiro está sendo bem cuidado.");
             System.out.println();
+            return;
         }
 
         for (int l = 0; l <  descricoes.size(); l++) {
-            System.out.println("DESCRIÇÕES: " + descricoes.get(l));
-            System.out.printf("VALORES: R$%.2f%n", valores.get(l));
+            System.out.println("DESCRIÇÃO: " + descricoes.get(l));
+            System.out.printf("VALOR: R$%.2f%n", valores.get(l));
             System.out.println("---------------------------");
             System.out.println();
         }
