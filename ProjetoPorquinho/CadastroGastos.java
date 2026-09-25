@@ -8,10 +8,10 @@ public class CadastroGastos {
 
         System.out.println("== CADASTRO DE GASTOS ==");
 
-        System.out.print("Informe a descrição do seu gasto (Ex: Mercado, Roupas): ");
+        System.out.print("O que fez seu Porquinho gastar hoje? (Ex: Mercado, Roupas): ");
         String desc = scanner.nextLine();
         while (desc.isEmpty()) {
-            System.out.println("O campo de informar descrição não pode ser vázio.");
+            System.out.println("Seu Porquinho precisa saber onde o dinheiro foi gasto.");
             System.out.print("Informe novamente a descrição do gasto: ");
             desc = scanner.nextLine();
         }
@@ -22,25 +22,26 @@ public class CadastroGastos {
 
         while (valor <= 0) {
             try {
-                System.out.print("Informe o valor gasto: ");
+                System.out.print("Quanto o Porquinho desembolsou? R$");
                 valor = scanner.nextDouble();
                 System.out.println();
 
                 if (valor <= 0) { // Feedback para o user.
-                    System.out.println("O valor não pode ser negativo ou R$0,00.");
+                    System.out.println("O Porquinho não registra gastos de R$ 0,00 ou valores negativos.");
                 }
 
             } catch (InputMismatchException e) {
-                System.out.println("Digite apenas números. Não é aceito letras.");
+                System.out.println("O Porquinho só entende números. Digite um valor válido.");
                 scanner.nextLine();
             }
         }
 
         valores.add(valor);
 
-        System.out.println("=== PRODUTO CADASTRADO COM SUCESSO! ===");
+        System.out.println("=== GASTO CADASTRADO COM SUCESSO! ===");
         System.out.println("DESCRIÇÃO: " + desc);
         System.out.printf("VALOR GASTO: R$%.2f%n", valor);
+        System.out.println("Seu Porquinho já está de olho nesse gasto!");
         System.out.println();
     }
 }
