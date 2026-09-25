@@ -8,11 +8,11 @@ Por aqui você vai encontrar:
 
 ```
 📄 Menu.java           → o cérebro do sistema (menu principal)
+📄 CadastrarReceita.java -> onde alimenta seu porquinho
 📄 CadastroGastos.java → onde os gastos são cadastrados
 📄 ListarGasto.java -> onde todos os gastos são listados
-📄 TotalGasto.java -> onde calcula o total de gastos cadastrados
+📄 ResumoFinanceiro.java -> onde calcula o total de gastos cadastrados
 📄 ExcluirGasto.java -> onde exclui gastos (Cadastrado errado, bug, estorno, etc)
-📄 CadastrarReceita.java -> onde alimenta seu porquinho
 ```
 
 Sinta-se em casa, mas cuidado pra não deixar o porquinho no vermelho. 🐽
