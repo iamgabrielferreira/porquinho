@@ -11,13 +11,14 @@ public class Menu {
         System.out.println("-- BEM-VINDO --");
 
         int opcao = 0;
-        while (opcao != 4) {
+        while (opcao != 5) {
             try {
                 System.out.println("==== MENU PORQUINHO ====");
                 System.out.println("1- Cadastrar Gasto");
                 System.out.println("2- Listar Gastos");
                 System.out.println("3- Calcular Total Gasto");
-                System.out.println("4- Sair do programa");
+                System.out.println("4- Excluir Gasto");
+                System.out.println("5- Sair do programa");
                 System.out.print("Digite a opção de sua preferência: ");
                 opcao = scanner.nextInt();
                 System.out.println();
@@ -38,6 +39,10 @@ public class Menu {
                         break;
 
                     case 4:
+                        ExcluirGasto.excluirGasto(descricoes, valores, scanner);
+                        break;
+
+                    case 5:
                         System.out.println("Fechando o porquinho...");
                         break;
 
@@ -51,3 +56,4 @@ public class Menu {
         }
     }
 }
+
