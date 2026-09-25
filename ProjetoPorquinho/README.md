@@ -12,6 +12,7 @@ Por aqui você vai encontrar:
 📄 ListarGasto.java -> onde todos os gastos são listados
 📄 TotalGasto.java -> onde calcula o total de gastos cadastrados
 📄 ExcluirGasto.java -> onde exclui gastos (Cadastrado errado, bug, estorno, etc)
+📄 CadastrarReceita.java -> onde alimenta seu porquinho
 ```
 
 Sinta-se em casa, mas cuidado pra não deixar o porquinho no vermelho. 🐽
