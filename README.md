@@ -18,7 +18,6 @@ A ideia é simples: um sistema de controle financeiro via terminal que **cresce 
 | Calcular total de gastos | ✅ |
 | Excluir gasto | ✅ |
 | Cadastrar receita | ✅ |
-| Calcular saldo |  em desenvolvimento |
 
 ---
 
@@ -70,7 +69,7 @@ PorquinhoFinanceiro/
     └── CadastrarReceita.java
     └── CadastroGastos.java
     └── ListarGasto.java
-    └── TotalGasto.java
+    └── ResumoFinanceiro.java
     └── ExcluirGasto.java
 ```
 
