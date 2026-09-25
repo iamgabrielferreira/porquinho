@@ -12,7 +12,7 @@ public class ListarGasto {
 
         for (int l = 0; l <  descricoes.size(); l++) {
             System.out.println("DESCRIÇÕES: " + descricoes.get(l));
-            System.out.println("VALORES: " + valores.get(l));
+            System.out.printf("VALORES: R$%.2f%n", valores.get(l));
             System.out.println("---------------------------");
             System.out.println();
         }
