@@ -9,7 +9,7 @@ public class ExcluirGasto {
         System.out.println();
 
         if (descricoes.isEmpty()) {
-            System.out.println("Não há gastos cadastrados para excluir.");
+            System.out.println("Não há gastos cadastrados para excluir. \nSeu Porquinho não encontrou nada para remover.");
             System.out.println();
             return;
 
@@ -23,18 +23,18 @@ public class ExcluirGasto {
 
         while (numero <= 0 || numero > descricoes.size()) {
             try {
-                System.out.print("Digite o número do gasto que deseja excluir: ");
+                System.out.print("Qual gasto o Porquinho deve remover? Digite o número:");
                 numero = scanner.nextInt();
                 scanner.nextLine();
                 System.out.println();
 
                 if (numero <= 0 || numero > descricoes.size()) { // Feedback para o user
-                    System.out.println("Número inválido. Informe um número maior que 0, seguindo a tabela de gastos disponível.");
+                    System.out.println("Número inválido. Escolha um gasto seguindo a tabela disponível.");
                     System.out.println();
                 }
 
             } catch (InputMismatchException e) {
-                System.out.println("Digite apenas números. Não é aceito letras.");
+                System.out.println("O Porquinho precisa de um número para encontrar o gasto.");
                 System.out.println();
                 scanner.nextLine();
             }
@@ -43,14 +43,15 @@ public class ExcluirGasto {
         numero -= 1;
 
         String descricaoExcluida = descricoes.get(numero);
-        double valoresExcluido = valores.get(numero);
+        double valorExcluido = valores.get(numero);
 
         descricoes.remove(numero);
         valores.remove(numero);
 
         System.out.println("GASTO EXCLUÍDO COM SUCESSO!");
         System.out.println("DESCRIÇÕES: " + descricaoExcluida);
-        System.out.printf("VALOR: R$%.2f%n", valoresExcluido);
+        System.out.printf("VALOR: R$%.2f%n", valorExcluido);
+        System.out.println("Esse gasto não faz mais parte do seu Porquinho.");
         System.out.println();
     }
 }
