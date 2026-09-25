@@ -29,7 +29,7 @@ public class Menu {
                         break;
 
                     case 2:
-                        System.out.println("Opção em manutenção.");
+                        ListarGasto.listarGasto(descricoes, valores);
                         break;
 
                     case 3:
