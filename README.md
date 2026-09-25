@@ -17,8 +17,8 @@ A ideia é simples: um sistema de controle financeiro via terminal que **cresce 
 | Listar gastos | ✅ |
 | Calcular total de gastos | ✅ |
 | Excluir gasto | ✅ |
-| Cadastrar receita | 🔧 em desenvolvimento |
-| Calcular saldo | ⏳ |
+| Cadastrar receita | ✅ |
+| Calcular saldo |  em desenvolvimento |
 
 ---
 
@@ -67,6 +67,7 @@ java Menu
 PorquinhoFinanceiro/
 └── ProjetoPorquinho/
     ├── Menu.java
+    └── CadastrarReceita.java
     └── CadastroGastos.java
     └── ListarGasto.java
     └── TotalGasto.java
