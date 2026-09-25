@@ -48,6 +48,7 @@ v1.0  Spring Boot + API REST      → projeto vira um backend completo
 * Percorrer `ArrayList` por índice usando `.size()` e `.get()`
 * Passagem de parâmetros e coleções por referência entre métodos
 * Validação de entrada do usuário
+* Remove()
 ---
 
 ## 🛠️ Como rodar
