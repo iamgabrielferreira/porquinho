@@ -3,8 +3,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AlimentarPorquinho {
-    public static void alimentarPorquinho(ArrayList<Double> valoresAlimentados, Scanner scanner)  {
+    private static final String EMOJI_PORQUINHO = "\uD83D\uDC37";
 
+    public static void alimentarPorquinho(ArrayList<Double> valoresAlimentados, Scanner scanner) {
         System.out.println("=== ALIMENTAR PORQUINHO ===");
         System.out.println();
 
@@ -12,7 +13,7 @@ public class AlimentarPorquinho {
 
         while (valorAlimentado <= 0) {
             try {
-                System.out.print("\uD83D\uDC37 Hora de alimentar o Porquinho! Quanto você quer guardar? R$");
+                System.out.print(EMOJI_PORQUINHO + " Hora de alimentar o Porquinho! Quanto você quer guardar? R$");
                 valorAlimentado = scanner.nextDouble();
                 System.out.println();
 
