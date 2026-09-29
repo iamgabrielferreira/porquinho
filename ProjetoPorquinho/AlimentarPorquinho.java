@@ -2,21 +2,21 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class CadastrarReceita {
-    public static void cadastrarReceita(ArrayList<Double> valorReceita, Scanner scanner)  {
+public class AlimentarPorquinho {
+    public static void alimentarPorquinho(ArrayList<Double> valoresAlimentados, Scanner scanner)  {
 
-        System.out.println("=== CADASTRAR RECEITA ===");
+        System.out.println("=== ALIMENTAR PORQUINHO ===");
         System.out.println();
 
-        double valor = 0;
+        double valorAlimentado = 0;
 
-        while (valor <= 0) {
+        while (valorAlimentado <= 0) {
             try {
                 System.out.print("\uD83D\uDC37 Hora de alimentar o Porquinho! Quanto você quer guardar? R$");
-                valor = scanner.nextDouble();
+                valorAlimentado = scanner.nextDouble();
                 System.out.println();
 
-                if (valor <= 0) {
+                if (valorAlimentado <= 0) {
                     System.out.println("O Porquinho está com fome! Coloque um valor maior que zero.");
                     System.out.println();
                 }
@@ -28,10 +28,10 @@ public class CadastrarReceita {
             }
         }
 
-        valorReceita.add(valor);
+        valoresAlimentados.add(valorAlimentado);
 
         System.out.println("SEU PORQUINHO FOI ALIMENTADO!");
-        System.out.printf("VALOR GUARDADO: R$%.2f%n", valor);
+        System.out.printf("VALOR GUARDADO: R$%.2f%n", valorAlimentado);
         System.out.println();
     }
 }
