@@ -45,7 +45,7 @@ public class Menu {
                         break;
 
                     case 4:
-                        TotalGasto.totalGasto(valores, valorReceita);
+                        ResumoFinanceiro.resumoFinanceiro(valores, valorReceita);
                         break;
 
                     case 5:
