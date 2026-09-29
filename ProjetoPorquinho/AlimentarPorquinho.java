@@ -16,6 +16,7 @@ public class AlimentarPorquinho {
                 System.out.print(EMOJI_PORQUINHO + " Hora de alimentar o Porquinho! Quanto você quer guardar? R$");
                 valorAlimentado = scanner.nextDouble();
                 System.out.println();
+                scanner.nextLine();
 
                 if (valorAlimentado <= 0) {
                     System.out.println("O Porquinho está com fome! Coloque um valor maior que zero.");
