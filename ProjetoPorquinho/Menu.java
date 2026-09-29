@@ -41,7 +41,7 @@ public class Menu {
     }
 
     private static void exibirMenu() {
-        System.out.println("==== MENU PORQUINHO ====");
+        System.out.println("=== MENU PORQUINHO ===");
         System.out.println("1- Alimentar o Porquinho");
         System.out.println("2- Cadastrar Gasto");
         System.out.println("3- Listar Gastos");
@@ -106,4 +106,3 @@ public class Menu {
         }
     }
 }
-

@@ -6,7 +6,7 @@ public class CadastroGastos {
 
     public static void cadastrar(ArrayList<String> descricoes, ArrayList<Double> valores, Scanner scanner) { // Array vindo do menu.
 
-        System.out.println("== CADASTRO DE GASTOS ==");
+        System.out.println("=== CADASTRO DE GASTOS ===");
 
         System.out.print("O que fez seu Porquinho gastar hoje? (Ex: Mercado, Roupas): ");
         String desc = scanner.nextLine();
@@ -38,7 +38,7 @@ public class CadastroGastos {
 
         valores.add(valor);
 
-        System.out.println("=== GASTO CADASTRADO COM SUCESSO! ===");
+        System.out.println("GASTO CADASTRADO COM SUCESSO!");
         System.out.println("DESCRIÇÃO: " + desc);
         System.out.printf("VALOR GASTO: R$%.2f%n", valor);
         System.out.println("Seu Porquinho já está de olho nesse gasto!");

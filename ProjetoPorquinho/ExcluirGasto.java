@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ExcluirGasto {
     public static void excluirGasto(ArrayList<String> descricoes, ArrayList<Double> valores, Scanner scanner) {
 
-        System.out.println("== EXCLUIR GASTOS ==");
+        System.out.println("=== EXCLUIR GASTOS ===");
         System.out.println();
 
         if (descricoes.isEmpty()) {

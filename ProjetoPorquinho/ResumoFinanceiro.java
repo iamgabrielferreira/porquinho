@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class ResumoFinanceiro {
     public static void resumoFinanceiro(ArrayList<Double> valores, ArrayList<Double> valorReceita) {
 
-        System.out.println("== CALCULAR TOTAL GASTO ==");
+        System.out.println("=== CALCULAR TOTAL GASTO ===");
         System.out.println();
 
         double somaGastos = 0;
