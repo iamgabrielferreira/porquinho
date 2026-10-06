@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AlimentarPorquinho {
@@ -9,26 +8,10 @@ public class AlimentarPorquinho {
         System.out.println("=== ALIMENTAR PORQUINHO ===");
         System.out.println();
 
-        double valorAlimentado = 0;
-
-        while (valorAlimentado <= 0) {
-            try {
-                System.out.print(EMOJI_PORQUINHO + " Hora de alimentar o Porquinho! Quanto você quer guardar? R$");
-                valorAlimentado = scanner.nextDouble();
-                System.out.println();
-                scanner.nextLine();
-
-                if (valorAlimentado <= 0) {
-                    System.out.println("O Porquinho está com fome! Coloque um valor maior que zero.");
-                    System.out.println();
-                }
-
-            } catch (InputMismatchException e) {
-                System.out.println("Ih! O Porquinho não come letras! Digite apenas números.");
-                scanner.nextLine();
-                System.out.println();
-            }
-        }
+        double valorAlimentado = LeituraDadosUsuario.lerValorPositivo(scanner,
+                EMOJI_PORQUINHO + " Hora de alimentar o Porquinho! Quanto você quer guardar? R$",
+                "O Porquinho está com fome! Coloque um valor maior que zero.",
+                "Ih! O Porquinho não come letras! Digite apenas números.");
 
         valoresAlimentados.add(valorAlimentado);
 
