@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class ResumoFinanceiro {
-    public static void resumoFinanceiro(ArrayList<Double> valores, ArrayList<Double> valorReceita) {
+    public static void resumoFinanceiro(ArrayList<Double> valores, ArrayList<Double> valoresAlimentados) {
 
         System.out.println("=== CALCULAR TOTAL GASTO ===");
         System.out.println();
@@ -12,7 +12,7 @@ public class ResumoFinanceiro {
         }
 
         double somaGastos = CalculadoraFinanceira.calculadoraFinanceira(valores);
-        double valorGuardado = CalculadoraFinanceira.calculadoraFinanceira(valorReceita);
+        double valorGuardado = CalculadoraFinanceira.calculadoraFinanceira(valoresAlimentados);
         double sobraValor =  valorGuardado - somaGastos;
 
         if (sobraValor < 0) {
@@ -22,8 +22,8 @@ public class ResumoFinanceiro {
             System.out.println();
         }
 
+        System.out.printf("TOTAL GUARDADO: R$%.2f%n", valorGuardado);
         System.out.printf("GASTO TOTAL: R$%.2f%n", somaGastos);
-        System.out.printf("TOTAL GUARDADO (receitas): R$%.2f%n", valorGuardado);
         System.out.printf("VALOR RESTANTE: R$ %.2f%n", sobraValor);
         System.out.println();
     }
