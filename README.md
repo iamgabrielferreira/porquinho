@@ -8,24 +8,27 @@ A ideia é simples: um sistema de controle financeiro via terminal que **cresce 
 
 ---
 
-## 🚀 Status atual: v0.1 — Java Básico + Collections
+## 🚀 Status atual: v0.2 — Java Básico + Collections
 
 | Funcionalidade | Status |
 |---|---|
 | Menu principal | ✅ |
-| Cadastrar gasto | ✅ |
-| Listar gastos | ✅ |
-| Calcular total de gastos | ✅ |
-| Excluir gasto | ✅ |
-| Cadastrar receita | ✅ |
+| Alimentar Porquinho | ✅ |
+| Cadastro Gastos |✅|
+| Listar Gastos | ✅ |
+| Excluir Gasto | ✅ |
+| Resumo Financeiro| ✅ |
+| Calculadora Financeira | ✅ |
+| Exibir Gasto | ✅ |
+| Leitura Dados Usuário | ✅ |
 
 ---
 
 ## 🗺️ Roadmap de evolução
 
 ```
-v0.1  Java básico + Collections   → menu, cadastro/listagem de gastos
-v0.2  Melhor organização          → métodos, validações, refino de Collections
+v0.1  Java básico + Collections   → menu, cadastro/listagem de gastos ✅
+v0.2  Melhor organização          → métodos, validações, refino de Collections ✅
 v0.3  POO                         → transformar o projeto em classes e objetos
 v0.4  Exceptions + regras         → tratamento de erros e regras de negócio robustas
 v0.5  Banco de dados              → MySQL/PostgreSQL
@@ -66,11 +69,14 @@ java Menu
 PorquinhoFinanceiro/
 └── ProjetoPorquinho/
     ├── Menu.java
-    └── CadastrarReceita.java
+    └── AlimentarPorquinho.java
     └── CadastroGastos.java
     └── ListarGasto.java
     └── ResumoFinanceiro.java
     └── ExcluirGasto.java
+    └── CalculadoraFinanceira.java
+    └── ExibirGasto.java
+    └── LeituraDadosUsuario.java
 ```
 
 ---
