@@ -22,10 +22,11 @@ Para a história completa do projeto, o roadmap e os conceitos aprendidos, veja 
 
 ## Como elas se relacionam
 
+```
 usuario
-|__ deposito
-|_ gasto
-
+└── deposito
+└── gasto
+````
 
 Um usuário tem vários depósitos e vários gastos. Se o usuário for apagado, os depósitos e gastos dele também são (`ON DELETE CASCADE`).
 
