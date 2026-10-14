@@ -7,12 +7,15 @@ Aqui é onde a mágica (e os `try/catch`) acontece — se procura a história co
 Por aqui você vai encontrar:
 
 ```
-📄 Menu.java           → o cérebro do sistema (menu principal)
-📄 CadastrarReceita.java -> onde alimenta seu porquinho
-📄 CadastroGastos.java → onde os gastos são cadastrados
-📄 ListarGasto.java -> onde todos os gastos são listados
-📄 ResumoFinanceiro.java -> onde calcula o total de gastos cadastrados
-📄 ExcluirGasto.java -> onde exclui gastos (Cadastrado errado, bug, estorno, etc)
+📄 Menu.java                  -> o cérebro do sistema (menu principal)
+📄 AlimentarPorquinho.java    -> onde você guarda dinheiro no porquinho
+📄 CadastroGastos.java        -> onde os gastos são cadastrados
+📄 ListarGasto.java           -> onde todos os gastos são listados
+📄 ExcluirGasto.java          -> onde exclui gastos
+📄 ResumoFinanceiro.java      -> mostra guardado, gasto e restante
+📄 CalculadoraFinanceira.java -> soma uma lista de valores
+📄 ExibirGasto.java           -> exibe a lista numerada de gastos
+📄 LeituraDadosUsuario.java   -> leitura e validação do que o usuário digita
 ```
 
 Sinta-se em casa, mas cuidado pra não deixar o porquinho no vermelho. 🐽
