@@ -31,7 +31,7 @@ v0.1  Java básico + Collections   → menu, cadastro/listagem de gastos ✅
 v0.2  Melhor organização          → métodos, validações, refino de Collections ✅
 v0.3  POO                         → transformar o projeto em classes e objetos
 v0.4  Exceptions + regras         → tratamento de erros e regras de negócio robustas
-v0.5  Banco de dados              → MySQL/PostgreSQL
+v0.5  Banco de dados              → MySQL/PostgreSQL ✅
 v0.6  JDBC                        → Connection, PreparedStatement, ResultSet
 v0.7  DAO                         → separação de responsabilidades
 v0.8  JUnit                       → testes automatizados
@@ -76,7 +76,9 @@ PorquinhoFinanceiro/
     └── ExcluirGasto.java
     └── CalculadoraFinanceira.java
     └── ExibirGasto.java
-    └── LeituraDadosUsuario.java
+    └── LeituraDadosUsuario.
+└── database
+    ├── schema.sql
 ```
 
 ---
