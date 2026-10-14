@@ -22,7 +22,8 @@ Para a história completa do projeto, o roadmap e os conceitos aprendidos, veja 
 
 ## Como elas se relacionam
 
-usuario ──┬──< deposito
+usuario
+──┬──< deposito
 └──< gasto
 
 
