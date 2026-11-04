@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class CadastroGastos {
 
-    public static void cadastrar(ArrayList<String> descricoes, ArrayList<Double> valores, Scanner scanner) {
+    public static void cadastrar(ArrayList<GastoPorquinho> gastos, Scanner scanner) {
 
         System.out.println("=== CADASTRO DE GASTOS ===");
 
@@ -19,8 +19,8 @@ public class CadastroGastos {
                 "O Porquinho não registra gastos de R$ 0,00 ou valores negativos.",
                 "O Porquinho só entende números. Digite um valor válido.");
 
-        descricoes.add(desc);
-        valores.add(valor);
+        GastoPorquinho gasto = new GastoPorquinho(desc, valor);
+        gastos.add(gasto);
 
         System.out.println("GASTO CADASTRADO COM SUCESSO!");
         System.out.println("DESCRIÇÃO: " + desc);
