@@ -16,6 +16,7 @@ Por aqui você vai encontrar:
 📄 CalculadoraFinanceira.java -> soma uma lista de valores
 📄 ExibirGasto.java           -> exibe a lista numerada de gastos
 📄 LeituraDadosUsuario.java   -> leitura e validação do que o usuário digita
+📄 GastoPorquinho.java -> Getter e Setter de gastos.
 ```
 
 Sinta-se em casa, mas cuidado pra não deixar o porquinho no vermelho. 🐽
