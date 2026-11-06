@@ -15,8 +15,7 @@ public class Menu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<String> descricoes = new ArrayList<>();
-        ArrayList<Double> valores = new ArrayList<>();
+        ArrayList<GastoPorquinho> gastos = new ArrayList<>();
         ArrayList<Double> valoresAlimentados = new ArrayList<>();
 
         exibirBoasVindas();
@@ -27,7 +26,7 @@ public class Menu {
 
             opcao = lerOpcao(scanner);
 
-            executarOpcao(opcao, valoresAlimentados, descricoes, valores, scanner);
+            executarOpcao(opcao, valoresAlimentados, gastos, scanner);
         }
 
         scanner.close();
@@ -73,8 +72,7 @@ public class Menu {
     private static void executarOpcao(
             int opcao,
             ArrayList<Double> valoresAlimentados,
-            ArrayList<String> descricoes,
-            ArrayList<Double> valores,
+            ArrayList<GastoPorquinho> gastos,
             Scanner scanner) {
 
         switch (opcao) {
@@ -82,16 +80,16 @@ public class Menu {
                     AlimentarPorquinho.alimentarPorquinho(valoresAlimentados, scanner);
 
             case CADASTRAR_GASTO ->
-                    CadastroGastos.cadastrar(descricoes, valores, scanner);
+                    CadastroGastos.cadastrar(gastos, scanner);
 
             case LISTAR_GASTOS ->
-                    ListarGasto.listarGasto(descricoes, valores);
+                    ListarGasto.listarGasto(gastos);
 
             case RESUMO_FINANCEIRO ->
-                    ResumoFinanceiro.resumoFinanceiro(valores, valoresAlimentados);
+                    ResumoFinanceiro.resumoFinanceiro(gastos, valoresAlimentados);
 
             case EXCLUIR_GASTO ->
-                    ExcluirGasto.excluirGasto(descricoes, valores, scanner);
+                    ExcluirGasto.excluirGasto(gastos, scanner);
 
             case SAIR -> {
                 System.out.println("Fechando o Porquinho...");
