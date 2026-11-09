@@ -1,19 +1,17 @@
-import java.util.ArrayList;
-
 public class CalculadoraFinanceira {
-    public static double calculadoraFinanceira(ArrayList<GastoPorquinho> gastos) {
+    public static double calculadoraFinanceira(Porquinho porquinho) {
 
         double soma = 0;
-        for (GastoPorquinho gasto : gastos) {
+        for (GastoPorquinho gasto : porquinho.getGastos()) {
             soma += gasto.getValor();
         }
         return soma;
     }
 
-    public static double calculadoraValores(ArrayList<Double> valores) {
+    public static double calculadoraValores(Porquinho porquinho) {
 
         double soma = 0;
-        for (double valor : valores) {
+        for (double valor : porquinho.getValoresAlimentados()) {
             soma += valor;
         }
         return soma;
@@ -23,15 +21,21 @@ public class CalculadoraFinanceira {
 /**
  * CalculadoraFinanceira
  *
- * Responsável pelos cálculos de totais do Porquinho.
- * Possui dois métodos, porque as duas listas guardam tipos diferentes de dado:
- * uma de GastoPorquinho (gastos) e outra de números (valores guardados).
+ * Responsável pelos cálculos dos totais financeiros do Porquinho.
  *
- * calculadoraFinanceira(ArrayList<GastoPorquinho> gastos)
- *   - Soma o valor de cada gasto da lista, lendo cada um com getValor().
- *   - Retorna o total gasto.
+ * Recebe o objeto Porquinho como parâmetro para acessar as listas
+ * por meio dos métodos getters.
  *
- * calculadoraValores(ArrayList<Double> valores)
- *   - Soma os números da lista de valores colocados no Porquinho.
- *   - Retorna o total guardado.
+ * Possui dois métodos, pois as listas armazenam tipos diferentes de dados:
+ * uma contém objetos GastoPorquinho e a outra contém valores Double.
+ *
+ * calculadoraFinanceira(Porquinho porquinho)
+ *   - Percorre a cópia da lista de gastos retornada por getGastos().
+ *   - A cada iteração, acessa o valor do gasto por meio de getValor().
+ *   - Soma todos os gastos e retorna o total gasto.
+ *
+ * calculadoraValores(Porquinho porquinho)
+ *   - Percorre a cópia da lista de valores retornada por getValoresAlimentados().
+ *   - Soma cada valor armazenado no Porquinho.
+ *   - Retorna o total de valores alimentados.
  */

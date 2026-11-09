@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -15,8 +14,7 @@ public class Menu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<GastoPorquinho> gastos = new ArrayList<>();
-        ArrayList<Double> valoresAlimentados = new ArrayList<>();
+        Porquinho porquinho = new Porquinho();
 
         exibirBoasVindas();
 
@@ -26,7 +24,7 @@ public class Menu {
 
             opcao = lerOpcao(scanner);
 
-            executarOpcao(opcao, valoresAlimentados, gastos, scanner);
+            executarOpcao(opcao, porquinho, scanner);
         }
 
         scanner.close();
@@ -71,25 +69,24 @@ public class Menu {
 
     private static void executarOpcao(
             int opcao,
-            ArrayList<Double> valoresAlimentados,
-            ArrayList<GastoPorquinho> gastos,
+            Porquinho porquinho,
             Scanner scanner) {
 
         switch (opcao) {
             case ALIMENTAR_PORQUINHO ->
-                    AlimentarPorquinho.alimentarPorquinho(valoresAlimentados, scanner);
+                    AlimentarPorquinho.alimentarPorquinho(porquinho, scanner);
 
             case CADASTRAR_GASTO ->
-                    CadastroGastos.cadastrar(gastos, scanner);
+                    CadastroGastos.cadastrarGasto(porquinho, scanner);
 
             case LISTAR_GASTOS ->
-                    ListarGasto.listarGasto(gastos);
+                    ListarGasto.listarGasto(porquinho);
 
             case RESUMO_FINANCEIRO ->
-                    ResumoFinanceiro.resumoFinanceiro(gastos, valoresAlimentados);
+                    ResumoFinanceiro.resumoFinanceiro(porquinho);
 
             case EXCLUIR_GASTO ->
-                    ExcluirGasto.excluirGasto(gastos, scanner);
+                    ExcluirGasto.excluirGasto(porquinho, scanner);
 
             case SAIR -> {
                 System.out.println("Fechando o Porquinho...");
