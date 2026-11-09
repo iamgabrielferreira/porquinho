@@ -78,6 +78,7 @@ PorquinhoFinanceiro/
     └── ExibirGasto.java
     └── LeituraDadosUsuario.java
     └── GastoPorquinho.java
+    └── Porquinho.java
 └── database
     ├── schema.sql
 ```
