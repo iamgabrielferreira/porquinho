@@ -19,8 +19,8 @@ public class Porquinho {
         }
     }
 
-    public void cadastrarGasto(String desc, double valor) {
-        GastoPorquinho gasto = new GastoPorquinho(desc, valor);
+    public void cadastrarGasto(String desc, double valor, String cat) {
+        GastoPorquinho gasto = new GastoPorquinho(desc, valor, cat);
         gastos.add(gasto);
     }
 
