@@ -22,5 +22,6 @@ public class CofreDeValores {
         double cofreFechado = CalculadoraFinanceira.calculadoraValores(porquinho);
 
         System.out.printf("TOTAL NO PORQUINHO: R$%.2f%n", cofreFechado);
+        System.out.println();
     }
 }
