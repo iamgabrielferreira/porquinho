@@ -9,6 +9,7 @@ id SERIAL PRIMARY KEY,
 fk_usuario INT NOT NULL,
 descricao VARCHAR (100) NOT NULL,
 valor DECIMAL (10,2) NOT NULL CHECK (valor > 0),
+categoria categorias NOT NULL,
 dt_gasto TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
 CONSTRAINT fk_gasto_usuario
