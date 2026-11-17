@@ -1,3 +1,9 @@
+-- criar o tipo ENUM
+CREATE TYPE categorias AS ENUM (
+	 'Moradia', 'Alimentação', 'Transporte', 'Saúde',
+    'Lazer e Estilo de Vida', 'Educação', 'Dívidas', 'Investimento'
+);
+
 CREATE TABLE gasto (
 id SERIAL PRIMARY KEY,
 fk_usuario INT NOT NULL,
