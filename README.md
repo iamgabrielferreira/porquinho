@@ -79,10 +79,12 @@ PorquinhoFinanceiro/
     └── LeituraDadosUsuario.
 └── database
     ├── PostgreSQL
-    └── schema
+    └── schema/
        └── 01_usuarios
        └──02_depositos
        └──03_gasto
+    ├── seeds/
+       └──dados_ficticios.sql
 ```
 
 ---
