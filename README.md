@@ -78,7 +78,11 @@ PorquinhoFinanceiro/
     └── ExibirGasto.java
     └── LeituraDadosUsuario.
 └── database
-    ├── schema.sql
+    ├── PostgreSQL
+    └── schame
+       └── 01_usuarios
+       └──02_depositos
+       └──03_gasto
 ```
 
 ---
