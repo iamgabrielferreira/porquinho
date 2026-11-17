@@ -1,13 +1,22 @@
-import java.util.ArrayList;
-
 public class ExibirGasto {
-    public static void exibirGasto(ArrayList<String> descricoes, ArrayList<Double> valores) {
+    public static void exibirGasto(Porquinho porquinho) {
 
-        for (int i = 0; i < descricoes.size(); i++) {
-            System.out.println((i + 1) + "- DESCRIÇÃO: " + descricoes.get(i));
-            System.out.printf("VALOR: R$%.2f%n", valores.get(i));
+        int numero = 1;
+
+        for (GastoPorquinho gasto : porquinho.getGastos()) {
+            System.out.println(numero + "- DESCRIÇÃO: " + gasto.getDescricao());
+            System.out.printf("VALOR: R$%.2f%n", gasto.getValor());
+            System.out.println("CATEGORIA: " + gasto.getCategoria());
             System.out.println("---------------------------");
             System.out.println();
+
+            numero++;
         }
     }
 }
+
+//porquinho.getGastos() retorna uma cópia imutável da lista de gastos.
+//O for each percorre essa lista, elemento por elemento.
+//A variável gasto recebe a referência ao objeto atual em cada iteração.
+//Com gasto.getDescricao() e gasto.getValor(), você acessa os atributos daquele objeto.
+

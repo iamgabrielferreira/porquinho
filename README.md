@@ -80,7 +80,13 @@ PorquinhoFinanceiro/
     └── GastoPorquinho.java
     └── Porquinho.java
 └── database
-    ├── schema.sql
+    ├── PostgreSQL
+    └── schema/
+       └── 01_usuarios
+       └──02_depositos
+       └──03_gasto
+    ├── seeds/
+       └──dados_ficticios.sql
 ```
 
 ---

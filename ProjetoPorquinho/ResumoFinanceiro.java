@@ -1,18 +1,17 @@
-import java.util.ArrayList;
-
 public class ResumoFinanceiro {
-    public static void resumoFinanceiro(ArrayList<Double> valores, ArrayList<Double> valoresAlimentados) {
+    public static void resumoFinanceiro(Porquinho porquinho) {
 
         System.out.println("=== CALCULAR TOTAL GASTO ===");
         System.out.println();
 
-        if (valores.isEmpty()) {
+        if (porquinho.getGastos().isEmpty()) {
             System.out.println("Nenhum gasto cadastrado. \nParabéns! O Porquinho está feliz e seu dinheiro está seguro.");
             System.out.println();
+            return;
         }
 
-        double somaGastos = CalculadoraFinanceira.calculadoraFinanceira(valores);
-        double valorGuardado = CalculadoraFinanceira.calculadoraFinanceira(valoresAlimentados);
+        double somaGastos = CalculadoraFinanceira.calculadoraFinanceira(porquinho);
+        double valorGuardado = CalculadoraFinanceira.calculadoraValores(porquinho);
         double sobraValor =  valorGuardado - somaGastos;
 
         if (sobraValor < 0) {

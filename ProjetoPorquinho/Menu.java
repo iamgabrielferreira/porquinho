@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -9,15 +8,14 @@ public class Menu {
     private static final int LISTAR_GASTOS = 3;
     private static final int RESUMO_FINANCEIRO = 4;
     private static final int EXCLUIR_GASTO = 5;
-    private static final int SAIR = 6;
+    private static final int COFRE_VALORES = 6;
+    private static final int SAIR = 7;
     private static final int ERRO_LEITURA = Integer.MAX_VALUE;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<String> descricoes = new ArrayList<>();
-        ArrayList<Double> valores = new ArrayList<>();
-        ArrayList<Double> valoresAlimentados = new ArrayList<>();
+        Porquinho porquinho = new Porquinho();
 
         exibirBoasVindas();
 
@@ -27,7 +25,7 @@ public class Menu {
 
             opcao = lerOpcao(scanner);
 
-            executarOpcao(opcao, valoresAlimentados, descricoes, valores, scanner);
+            executarOpcao(opcao, porquinho, scanner);
         }
 
         scanner.close();
@@ -47,7 +45,8 @@ public class Menu {
         System.out.println("3- Listar Gastos");
         System.out.println("4- Consultar Resumo Financeiro");
         System.out.println("5- Excluir Gasto");
-        System.out.println("6- Sair do programa");
+        System.out.println("6- Cofre de Valores");
+        System.out.println("7- Sair do programa");
     }
 
     private static int lerOpcao(Scanner scanner) {
@@ -72,26 +71,27 @@ public class Menu {
 
     private static void executarOpcao(
             int opcao,
-            ArrayList<Double> valoresAlimentados,
-            ArrayList<String> descricoes,
-            ArrayList<Double> valores,
+            Porquinho porquinho,
             Scanner scanner) {
 
         switch (opcao) {
             case ALIMENTAR_PORQUINHO ->
-                    AlimentarPorquinho.alimentarPorquinho(valoresAlimentados, scanner);
+                    AlimentarPorquinho.alimentarPorquinho(porquinho, scanner);
 
             case CADASTRAR_GASTO ->
-                    CadastroGastos.cadastrar(descricoes, valores, scanner);
+                    CadastroGastos.cadastrarGasto(porquinho, scanner);
 
             case LISTAR_GASTOS ->
-                    ListarGasto.listarGasto(descricoes, valores);
+                    ListarGasto.listarGasto(porquinho);
 
             case RESUMO_FINANCEIRO ->
-                    ResumoFinanceiro.resumoFinanceiro(valores, valoresAlimentados);
+                    ResumoFinanceiro.resumoFinanceiro(porquinho);
 
             case EXCLUIR_GASTO ->
-                    ExcluirGasto.excluirGasto(descricoes, valores, scanner);
+                    ExcluirGasto.excluirGasto(porquinho, scanner);
+
+            case COFRE_VALORES ->
+                    CofreDeValores.cofrinho(porquinho);
 
             case SAIR -> {
                 System.out.println("Fechando o Porquinho...");
