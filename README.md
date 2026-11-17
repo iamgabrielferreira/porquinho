@@ -79,7 +79,7 @@ PorquinhoFinanceiro/
     └── LeituraDadosUsuario.
 └── database
     ├── PostgreSQL
-    └── schame
+    └── schema
        └── 01_usuarios
        └──02_depositos
        └──03_gasto
