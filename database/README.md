@@ -6,11 +6,10 @@ Para a história completa do projeto, o roadmap e os conceitos aprendidos, veja 
 
 ## Como criar o banco
 
-1. Abra o MySQL Workbench conectado ao MariaDB/MySQL.
-2. Abra o arquivo `schema.sql` desta pasta.
-3. Execute o script inteiro. Ele cria o banco `porquinho` e as três tabelas.
+1. Abra o PostgreSQL
+2. Abra o arquivo `schema` desta pasta.
+3. Execute o script inteiro. Ele cria as três tabelas.
 
-> ⚠️ O script começa com `CREATE DATABASE porquinho;`, então dá erro se o banco já existir.
 
 ## Tabelas
 
@@ -38,5 +37,4 @@ restante = soma dos depósitos − soma dos gastos
 
 ## Tecnologias
 
-- MariaDB 10.4 / MySQL
-- Testado pelo MySQL Workbench
+- PostgreSQL
