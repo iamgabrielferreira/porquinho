@@ -24,6 +24,10 @@ public class Porquinho {
         return soma;
     }
 
+    public double getSaldo() {
+        return getTotalGuardado() - getTotalGasto();
+    }
+
     public void alimentarPorquinho(double valor) {
         if (valor <= 0) {
             throw new IllegalArgumentException(
@@ -61,5 +65,3 @@ public class Porquinho {
         return List.copyOf(valoresAlimentados);
     }
 }
-
-
