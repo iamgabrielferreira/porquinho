@@ -8,6 +8,14 @@ public class Porquinho {
     public Porquinho () {
     }
 
+    public double getTotalGasto() {
+        double soma = 0;
+        for (GastoPorquinho gasto : gastos) {
+            soma += gasto.getValor();
+        }
+        return soma;
+    }
+
     public void alimentarPorquinho(double valor) {
         if (valor <= 0) {
             throw new IllegalArgumentException(
@@ -45,3 +53,4 @@ public class Porquinho {
         return List.copyOf(valoresAlimentados);
     }
 }
+
