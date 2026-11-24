@@ -1,9 +1,9 @@
 public class GastoPorquinho {
     private String descricao;
     private double valor;
-    private String categoria;
+    private Categoria categoria;
 
-    public GastoPorquinho(String descricao, double valor, String categoria) {
+    public GastoPorquinho(String descricao, double valor, Categoria categoria) {
         setDescricao(descricao);
         setValor(valor);
         setCategoria(categoria);
@@ -44,18 +44,20 @@ public class GastoPorquinho {
         }
     }
 
-    public String getCategoria() {
+    public Categoria getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String cat) {
-        if (cat == null || cat.strip().isEmpty()) {
+    public void setCategoria(Categoria cat) {
+        if (cat == null) {
             throw new IllegalArgumentException(
                     "O Porquinho aceita apenas gastos que possuem categoria."
             );
         }
         else {
-            categoria = cat.strip();
+            categoria = cat;
         }
     }
 }
+
+
