@@ -1,12 +1,20 @@
+import java.time.LocalDateTime;
+
 public class GastoPorquinho {
     private String descricao;
     private double valor;
     private Categoria categoria;
+    private LocalDateTime data;
+
+    public LocalDateTime getData() {
+        return data;
+    }
 
     public GastoPorquinho(String descricao, double valor, Categoria categoria) {
         setDescricao(descricao);
         setValor(valor);
         setCategoria(categoria);
+        this.data = LocalDateTime.now();
     }
 
     public String getDescricao() {
@@ -59,5 +67,4 @@ public class GastoPorquinho {
         }
     }
 }
-
 

@@ -2,11 +2,12 @@ public class ExibirGasto {
     public static void exibirGasto(Porquinho porquinho) {
 
         int numero = 1;
-
+        
         for (GastoPorquinho gasto : porquinho.getGastos()) {
             System.out.println(numero + "- DESCRIÇÃO: " + gasto.getDescricao());
             System.out.printf("VALOR: R$%.2f%n", gasto.getValor());
             System.out.println("CATEGORIA: " + gasto.getCategoria().getNome());
+            System.out.println("DATA: " + FormatadorData.formatar(gasto.getData()));
             System.out.println("---------------------------");
             System.out.println();
 

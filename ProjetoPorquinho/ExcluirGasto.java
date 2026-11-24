@@ -45,6 +45,7 @@ public class ExcluirGasto {
             System.out.println("DESCRIÇÃO: " + gastoExcluido.getDescricao());
             System.out.printf("VALOR: R$%.2f%n", gastoExcluido.getValor());
             System.out.println("CATEGORIA: " + gastoExcluido.getCategoria().getNome());
+            System.out.println("DATA: " + FormatadorData.formatar(gastoExcluido.getData()));
             System.out.println("Esse gasto não faz mais parte do seu Porquinho.");
             System.out.println();
         }

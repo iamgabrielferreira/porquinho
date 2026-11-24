@@ -7,14 +7,17 @@ public class CofreDeValores {
         System.out.println("=== DEPOSITADOS ===");
         System.out.println();
 
-        if (porquinho.getValoresAlimentados().isEmpty()) {
+        if (porquinho.getDepositos().isEmpty()) {
             System.out.println("Seu porquinho está vazio. \nDeposite valores para acessar seu Cofre de Valores.");
             System.out.println();
             return;
         }
 
-        for (Double cofre : porquinho.getValoresAlimentados()) {
-            System.out.printf("%d- R$%.2f%n", numero, cofre);
+        for (Deposito deposito : porquinho.getDepositos()) {
+            System.out.printf("%d- R$%.2f | DATA: %s%n", numero, deposito.getValor(), FormatadorData.formatar(deposito.getData()));
+            System.out.println();
+            System.out.println("-----------------------------------------");
+            System.out.println();
 
             numero++;
         }
@@ -25,3 +28,4 @@ public class CofreDeValores {
         System.out.println();
     }
 }
+
