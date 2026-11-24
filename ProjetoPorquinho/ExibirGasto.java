@@ -6,7 +6,7 @@ public class ExibirGasto {
         for (GastoPorquinho gasto : porquinho.getGastos()) {
             System.out.println(numero + "- DESCRIÇÃO: " + gasto.getDescricao());
             System.out.printf("VALOR: R$%.2f%n", gasto.getValor());
-            System.out.println("CATEGORIA: " + gasto.getCategoria());
+            System.out.println("CATEGORIA: " + gasto.getCategoria().getNome());
             System.out.println("---------------------------");
             System.out.println();
 

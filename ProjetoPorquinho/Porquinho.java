@@ -8,6 +8,26 @@ public class Porquinho {
     public Porquinho () {
     }
 
+    public double getTotalGasto() {
+        double soma = 0;
+        for (GastoPorquinho gasto : gastos) {
+            soma += gasto.getValor();
+        }
+        return soma;
+    }
+
+    public double getTotalGuardado() {
+        double soma = 0;
+        for (double valor : valoresAlimentados) {
+            soma += valor;
+        }
+        return soma;
+    }
+
+    public double getSaldo() {
+        return getTotalGuardado() - getTotalGasto();
+    }
+
     public void alimentarPorquinho(double valor) {
         if (valor <= 0) {
             throw new IllegalArgumentException(

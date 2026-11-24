@@ -10,9 +10,9 @@ public class ResumoFinanceiro {
             return;
         }
 
-        double somaGastos = CalculadoraFinanceira.calculadoraFinanceira(porquinho);
-        double valorGuardado = CalculadoraFinanceira.calculadoraValores(porquinho);
-        double sobraValor =  valorGuardado - somaGastos;
+        double somaGastos = porquinho.getTotalGasto();
+        double valorGuardado = porquinho.getTotalGuardado();
+        double sobraValor =  porquinho.getSaldo();
 
         if (sobraValor < 0) {
 

@@ -3,13 +3,10 @@ import java.util.Scanner;
 
 public class CadastroGastos {
 
-    private static final String[] CATEGORIAS = {
-            "Moradia", "Alimentação", "Transporte", "Saúde",
-            "Lazer e Estilo de Vida", "Educação", "Dívidas", "Investimento"
-            };
-
-
     public static void cadastrarGasto(Porquinho porquinho, Scanner scanner) {
+
+        // Array com todas as constantes do enum (posição 0 = MORADIA, 1 = ALIMENTACAO...)
+        Categoria[] todasCategorias = Categoria.values();
 
         System.out.println("=== CADASTRO DE GASTOS ===");
 
@@ -27,19 +24,19 @@ public class CadastroGastos {
 
 
         System.out.println("== CATEGORIAS DE GASTOS ==");
-        for (int i = 0; i < CATEGORIAS.length; i++) {
-            System.out.println((i + 1) + "- " + CATEGORIAS[i]);
+        for (int i = 0; i < todasCategorias.length; i++) {
+            System.out.println((i + 1) + "- " + todasCategorias[i].getNome());
         }
 
         int num = 0;
-        while (num < 1 || num > CATEGORIAS.length) {
+        while (num < 1 || num > todasCategorias.length) {
             try {
                 System.out.print("Digite o número da categoria: ");
                 num = scanner.nextInt();
                 scanner.nextLine();
                 System.out.println();
 
-                if (num < 1 || num > CATEGORIAS.length) {
+                if (num < 1 || num > todasCategorias.length) {
                     System.out.println("Número inválido. Escolha uma categoria da lista.");
                     System.out.println();
                 }
@@ -51,14 +48,14 @@ public class CadastroGastos {
             }
         }
 
-        String categoria = CATEGORIAS[num - 1];
+        Categoria categoria = todasCategorias[num - 1];
 
         porquinho.cadastrarGasto(desc, valor, categoria);
 
         System.out.println("GASTO CADASTRADO COM SUCESSO!");
         System.out.println("DESCRIÇÃO: " + desc);
         System.out.printf("VALOR GASTO: R$%.2f%n", valor);
-        System.out.println("CATEGORIA: " + categoria);
+        System.out.println("CATEGORIA: " + categoria.getNome());
         System.out.println("Seu Porquinho já está de olho nesse gasto!");
         System.out.println();
     }
