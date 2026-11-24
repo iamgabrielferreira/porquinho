@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Porquinho {
     private ArrayList<GastoPorquinho> gastos = new ArrayList<>();
-    private ArrayList<Double> valoresAlimentados = new ArrayList<>();
+    private ArrayList<Deposito> depositos = new ArrayList<>();
 
     public Porquinho () {
     }
@@ -18,8 +18,8 @@ public class Porquinho {
 
     public double getTotalGuardado() {
         double soma = 0;
-        for (double valor : valoresAlimentados) {
-            soma += valor;
+        for (Deposito deposito : depositos) {
+            soma += deposito.getValor();
         }
         return soma;
     }
@@ -28,18 +28,18 @@ public class Porquinho {
         return getTotalGuardado() - getTotalGasto();
     }
 
-    public void alimentarPorquinho(double valor) {
-        if (valor <= 0) {
+    public void alimentarPorquinho(Deposito valor) {
+        if (valor == null) {
             throw new IllegalArgumentException(
-                    "O Porquinho não registra valores de R$ 0,00 ou valores negativos."
+                    "O Porquinho precisa de um depósito válido."
             );
 
         } else {
-            this.valoresAlimentados.add(valor);
+            this.depositos.add(valor);
         }
     }
 
-    public void cadastrarGasto(String desc, double valor, String cat) {
+    public void cadastrarGasto(String desc, double valor, Categoria cat) {
         GastoPorquinho gasto = new GastoPorquinho(desc, valor, cat);
         gastos.add(gasto);
     }
@@ -61,7 +61,7 @@ public class Porquinho {
         // Retorna uma cópia imutável da lista, impedindo alterações diretas na coleção original. Seria uma cópia da lista original.
     }
 
-    public List<Double> getValoresAlimentados() {
-        return List.copyOf(valoresAlimentados);
+    public List<Deposito> getDepositos() {
+        return List.copyOf(depositos);
     }
 }
