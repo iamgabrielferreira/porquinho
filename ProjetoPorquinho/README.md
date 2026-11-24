@@ -6,18 +6,33 @@ Aqui é onde a mágica (e os `try/catch`) acontece — se procura a história co
 
 Por aqui você vai encontrar:
 
+### 🧱 Os dados (classes do Porquinho)
+
 ```
-📄 Menu.java                  -> o cérebro do sistema (menu principal)
-📄 AlimentarPorquinho.java    -> onde você guarda dinheiro no porquinho
-📄 CadastroGastos.java        -> onde os gastos são cadastrados
-📄 ListarGasto.java           -> onde todos os gastos são listados
-📄 ExcluirGasto.java          -> onde exclui gastos
-📄 ResumoFinanceiro.java      -> mostra guardado, gasto e restante
-📄 CalculadoraFinanceira.java -> soma uma lista de valores
-📄 ExibirGasto.java           -> exibe a lista numerada de gastos
-📄 LeituraDadosUsuario.java   -> leitura e validação do que o usuário digita
-📄 GastoPorquinho.java -> Getter e Setter de gastos.
-📄 Porquinho.java -> gerencia as listas e os dados financeiros do sistema.
+📄 Porquinho.java      -> guarda as listas de gastos e depósitos e calcula totais e saldo
+📄 GastoPorquinho.java -> um gasto: descrição, valor, categoria e data (com validação nos setters)
+📄 Deposito.java       -> um depósito: valor e data
+📄 Categoria.java      -> enum com a lista fixa de categorias de gasto
+```
+
+### 🖥️ As telas
+
+```
+📄 Menu.java                -> o cérebro do sistema (menu principal)
+📄 AlimentarPorquinho.java  -> onde você guarda dinheiro no porquinho
+📄 CofreDeValores.java      -> lista os depósitos, com data, e o total guardado
+📄 CadastroGastos.java      -> onde os gastos são cadastrados (com categoria)
+📄 ListarGasto.java         -> onde todos os gastos são listados
+📄 ExcluirGasto.java        -> onde exclui gastos
+📄 ResumoFinanceiro.java    -> mostra guardado, gasto e saldo
+```
+
+### 🧰 Os ajudantes
+
+```
+📄 ExibirGasto.java          -> exibe a lista numerada de gastos
+📄 LeituraDadosUsuario.java  -> leitura e validação do que o usuário digita
+📄 FormatadorData.java       -> formata datas no padrão dd/MM/yyyy HH:mm
 ```
 
 Sinta-se em casa, mas cuidado pra não deixar o porquinho no vermelho. 🐽
