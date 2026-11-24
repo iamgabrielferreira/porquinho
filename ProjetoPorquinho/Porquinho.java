@@ -28,14 +28,14 @@ public class Porquinho {
         return getTotalGuardado() - getTotalGasto();
     }
 
-    public void alimentarPorquinho(Deposito valor) {
-        if (valor == null) {
+    public void alimentarPorquinho(Deposito deposito) {
+        if (deposito == null) {
             throw new IllegalArgumentException(
                     "O Porquinho precisa de um depósito válido."
             );
 
         } else {
-            this.depositos.add(valor);
+            this.depositos.add(deposito);
         }
     }
 
@@ -65,3 +65,4 @@ public class Porquinho {
         return List.copyOf(depositos);
     }
 }
+
