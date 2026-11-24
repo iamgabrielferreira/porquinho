@@ -14,7 +14,7 @@ public class CofreDeValores {
         }
 
         for (Deposito deposito : porquinho.getDepositos()) {
-            System.out.printf("%d- R$%.2f | DATA: %s%n", numero, cofre.getValor(), FormatadorData.formatar(cofre.getData()));
+            System.out.printf("%d- R$%.2f | DATA: %s%n", numero, deposito.getValor(), FormatadorData.formatar(deposito.getData()));
             System.out.println();
             System.out.println("-----------------------------------------");
             System.out.println();
