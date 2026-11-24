@@ -12,7 +12,7 @@ public class AlimentarPorquinho {
                 "O Porquinho está com fome! Coloque um valor maior que zero.",
                 "Ih! O Porquinho não come letras! Digite apenas números.");
 
-        porquinho.alimentarPorquinho(valorAlimentado);
+        porquinho.alimentarPorquinho(new Deposito(valorAlimentado));
         // Solicita ao objeto Porquinho que armazene o valor alimentado em sua lista interna.
 
 
