@@ -116,7 +116,7 @@ PorquinhoFinanceiro/
 
 Esse projeto **não busca ser perfeito ou "enterprise"** — ele reflete exatamente o nível de conhecimento que eu tenho em cada etapa. A cada nova fase, o código é revisado e evoluído com um propósito: aprender por necessidade, não por modismo.
 
-Feedbacks e sugestões são sempre bem-vindos! 💗
+Feedbacks e sugestões são sempre bem-vindos!
 
 ---
 
